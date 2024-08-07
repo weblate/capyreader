@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.material.icons.rounded.Search
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -25,6 +26,7 @@ fun FeedActions(
     onFeedEdited: () -> Unit,
     onRemoveFeed: (feedID: String) -> Unit,
     onEditFailure: (message: String) -> Unit,
+    onNavigateToSearch: () -> Unit,
 ) {
     val (expanded, setMenuExpanded) = remember { mutableStateOf(false) }
     val (isEditDialogOpen, setEditDialogOpen) = rememberSaveable { mutableStateOf(false) }
@@ -36,6 +38,13 @@ fun FeedActions(
             MarkAllReadButton(
                 onMarkAllRead = onMarkAllRead,
             )
+
+            IconButton(onClick = { onNavigateToSearch() }) {
+                Icon(
+                    imageVector = Icons.Rounded.Search,
+                    contentDescription = stringResource(R.string.action_search_articles)
+                )
+            }
 
             if (feed != null) {
                 IconButton(onClick = { setMenuExpanded(true) }) {
@@ -101,5 +110,6 @@ fun FeedActionsPreview() {
         onRemoveFeed = {},
         onEditFailure = {},
         onMarkAllRead = {},
+        onNavigateToSearch = {},
     )
 }

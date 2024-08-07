@@ -12,6 +12,7 @@ fun ArticleScreen(
     viewModel: ArticleScreenViewModel = koinViewModel(),
     appPreferences: AppPreferences = koinInject(),
     onNavigateToSettings: () -> Unit,
+    onNavigateToSearch: () -> Unit,
 ) {
     val feeds by viewModel.feeds.collectAsStateWithLifecycle(initialValue = emptyList())
     val allFeeds by viewModel.allFeeds.collectAsStateWithLifecycle(initialValue = emptyList())
@@ -43,6 +44,7 @@ fun ArticleScreen(
         onMarkAllRead = viewModel::markAllRead,
         showUnauthorizedMessage = viewModel.showUnauthorizedMessage,
         onUnauthorizedDismissRequest = viewModel::dismissUnauthorizedMessage,
-        refreshInterval = appPreferences.refreshInterval.get()
+        refreshInterval = appPreferences.refreshInterval.get(),
+        onNavigateToSearch = onNavigateToSearch,
     )
 }

@@ -84,7 +84,8 @@ fun ArticleLayout(
     onRemoveFeed: (feedID: String, onSuccess: () -> Unit, onFailure: () -> Unit) -> Unit,
     drawerValue: DrawerValue = DrawerValue.Closed,
     showUnauthorizedMessage: Boolean,
-    onUnauthorizedDismissRequest: () -> Unit
+    onUnauthorizedDismissRequest: () -> Unit,
+    onNavigateToSearch: () -> Unit,
 ) {
     val skipInitialRefresh = refreshInterval == RefreshInterval.MANUALLY_ONLY
 
@@ -278,7 +279,8 @@ fun ArticleLayout(
                                 },
                                 onEditFailure = { message ->
                                     showSnackbar(message)
-                                }
+                                },
+                                onNavigateToSearch = onNavigateToSearch
                             )
                         }
                     )
@@ -404,7 +406,8 @@ fun ArticleLayoutPreview() {
             onMarkAllRead = {},
             drawerValue = DrawerValue.Open,
             showUnauthorizedMessage = false,
-            onUnauthorizedDismissRequest = {}
+            onUnauthorizedDismissRequest = {},
+            onNavigateToSearch = {}
         )
     }
 }
