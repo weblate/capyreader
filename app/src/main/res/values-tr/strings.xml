@@ -92,9 +92,9 @@
     <string name="account_source_local">Yerel</string>
     <string name="font_option_system_default">Sistem varsayılanı</string>
     <string name="opml_import_progress_content_text_start">İçeri aktarım başlatılıyor</string>
-    <string name="add_feed_new_folder_title">Yeni Etiket</string>
+    <string name="add_feed_new_folder_title">Yeni Klasör</string>
     <string name="update_auth_success_message">Başarıyla giriş yapıldı</string>
-    <string name="settings_section_refresh">Yenile</string>
+    <string name="settings_section_refresh">Son Güncellenen</string>
     <string name="opml_import_button_text">Dosyadan içeri aktar</string>
     <string name="opml_export_button_text">OPML\'yi Dışa Aktar</string>
     <string name="settings_panel_display_title">Ekran ve Görünüm</string>
@@ -263,7 +263,7 @@
     <string name="add_account_reader_subtitle">Kendi kendine barındırılan Google Reader API</string>
     <string name="settings_gestures_improve_talkback_subtitle">Talkback metnini iyileştirmek için bazı ayarları devre dışı bırakır</string>
     <string name="settings_gestures_improve_talkback_title">Talkback\'i iyileştir</string>
-    <string name="settings_options_reader_pin_top_toolbar">Üst araç çubuğunu sabitle</string>
+    <string name="settings_options_reader_pin_top_toolbar">Araç Çubuklarını Sabitle</string>
     <string name="add_account_miniflux_signup_prompt">Miniflux örneğiniz yok mu?</string>
     <string name="add_account_miniflux_signup_link_text">Daha fazlasını öğrenin.</string>
     <string name="theme_dynamic">Dinamik</string>
@@ -346,4 +346,12 @@
     <string name="article_actions_save_externally_failure">Kaydedilemedi</string>
     <string name="article_actions_delete_page">Sayfayı sil</string>
     <string name="article_actions_delete_page_message">Bu sayfayı silmek istediğinizden emin misiniz?</string>
+    <string name="widget_receiver_spotlight_title">Öne Çıkanlar</string>
+    <string name="freshrss_visibility_option_main">Ana Akış</string>
+    <string name="audio_player_play">Oynat</string>
+    <string name="audio_player_pause">Duraklat</string>
+    <string name="audio_player_close">Oynatıcıyı kapat</string>
+    <string name="settings_panel_unread_counts_title">Okunmadı Rozetleri</string>
+    <string name="settings_option_badge_style">Rozet biçimi</string>
+    <string name="badge_style_exact">Tam</string>
 </resources>
